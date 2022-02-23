@@ -39,20 +39,20 @@ kmeans = KMeans(init="random", n_clusters=3, n_init=10, max_iter=300, random_sta
 
 kmeans.fit(scaled_features)
 
-# The lowest Sum of Square Error value
+#The lowest Sum of Square Error value
 kmeans.inertia_
 
-# Final locations of the centroid
+#Final locations of the centroid
 kmeans.cluster_centers_
 
-# The number of iterations required to converge
+#The number of iterations required to converge
 kmeans.n_iter_
 
 kmeans.labels_[:5]
 
 kmeans_kwargs = {"init": "random","n_init": 10,"max_iter": 300,"random_state": 42,}
 
-# A list holds the Sum of Square Error values for each k
+#A list holds the Sum of Square Error values for each k
 sse = []
 for k in range(1, 11):
     kmeans = KMeans(n_clusters=k, **kmeans_kwargs)
